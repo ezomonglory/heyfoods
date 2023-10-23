@@ -47,8 +47,8 @@ const SortRestaurantBox = ({ setClick }) => {
 	return (
 		<div>
 			<div className='flex flex-col gap-y-0 md:gap-y-[24px]  relative   h-full '>
-				<div className='flex gap-x-4 items-center w-full'>
-					<h1 className='text-black tracking-[-0.5px] mb-4 md:mb-0 font-[500] text-[22px] md:text-[24px] lg:text-[32px] '>
+				<div className='flex gap-x-4 items-center w-full mb-4 md:mb-0   '>
+					<h1 className='text-black tracking-[-0.5px] font-[500] text-[22px] md:text-[24px] lg:text-[32px] '>
 						Sorted Restaurants
 					</h1>
 

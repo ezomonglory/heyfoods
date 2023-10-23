@@ -98,7 +98,7 @@ const MainBox = ({ data }) => {
 					</div>
 				</div>
 				<div className='overflow-x-scroll scroll-hidden ' ref={carouselRef}>
-					<div className='flex gap-x-[12px] md:gap-x-[24px] w-screen '>
+					<div className='flex gap-x-[16px] md:gap-x-[24px] w-screen '>
 						{loader ? (
 							<RestaurantLoader />
 						) : (
