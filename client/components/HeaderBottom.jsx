@@ -21,7 +21,11 @@ const HeaderBottom = ({setSortShow, sortShow, setSearch}) => {
   return (
     
 			<div className='flex md:hidden justify-between border-[1px] border-b-gray-200 border-transparent pb-2 bg-white px-[16px] py-[12px] '>
-            <div className=' w-[90%] block '>
+            <div className=' w-[90%] block '
+            onClick={()=>{
+                setSearch(true)
+            }}
+            >
                 <TextField
                     variant='outlined'
                     placeholder='Search restuarant or food'

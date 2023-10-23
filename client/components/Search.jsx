@@ -23,7 +23,7 @@ const Search = ({ setSearch }) => {
 				</IconButton>
 			</div>
 
-			<div className={`text-[14px]`}>
+			<div className={`text-[14px] mt-12`}>
 				Try Searching for names like Chop and Go, Nkoyo, Big Mama's Kitchen, Iya
 				Meta etc..
 			</div>
