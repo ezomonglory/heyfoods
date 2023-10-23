@@ -9,10 +9,8 @@ import { useDispatch } from "react-redux";
 const HeaderTop = ({ setSideBarShow, setSearch }) => {
     const dispatch = useDispatch()
 	const handleSearch = (event) => {
-		if (event.key === "Enter") {
-            console.log("heyyy")
-			const searchTerm = event.target.value;
-			// Perform the search action with the searchTerm
+		if (event.key === "Enter") {            
+			const searchTerm = event.target.value;			
 			performSearch(searchTerm);
 		}
 	};

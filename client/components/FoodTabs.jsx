@@ -15,7 +15,6 @@ const FoodTabs = () => {
 	const sortedRestaurant = useSelector((state) => state.sort.sortRestaurant);
 	const foodLoading = useSelector((state) => state.food.loading);
 	// const foodLoading = true;
-
 	console.log(foodLoading + "fooodd");
 
 	const dispatch = useDispatch();
