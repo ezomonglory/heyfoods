@@ -1,9 +1,26 @@
+"use client";
+import { searchRestaurantAsync } from "@/redux/features/RestaurantSlice";
 import { LocationOn, Menu, Search, ShoppingCart } from "@mui/icons-material";
 import { Button, IconButton, InputAdornment, TextField } from "@mui/material";
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
+import { useDispatch } from "react-redux";
 
-const HeaderTop = ({ setSideBarShow }) => {
+const HeaderTop = ({ setSideBarShow, setSearch }) => {
+    const dispatch = useDispatch()
+	const handleSearch = (event) => {
+		if (event.key === "Enter") {
+            console.log("heyyy")
+			const searchTerm = event.target.value;
+			// Perform the search action with the searchTerm
+			performSearch(searchTerm);
+		}
+	};
+
+	const performSearch = (searchTerm) => {
+            dispatch(searchRestaurantAsync(searchTerm))
+	};
+
 	return (
 		<div className='text-black px-[16px] bg-white md:px-[3rem] py-[16px] lg:px-[4rem] flex justify-between items-center  z-30 '>
 			<div className='flex  items-center justify-between '>
@@ -37,11 +54,17 @@ const HeaderTop = ({ setSideBarShow }) => {
 					</Button>
 				</div>
 			</div>
-			<div className='md:w-[30%] lg:w-[30%] hidden md:block '>
+			<div
+				className='md:w-[30%] lg:w-[30%] hidden md:block '
+				onClick={() => {
+					setSearch(true);
+				}}
+			>
 				<TextField
 					variant='outlined'
 					placeholder='Search restuarant or food'
 					fullWidth
+					onKeyDown={handleSearch}
 					sx={{
 						borderRadius: 8,
 						backgroundColor: "#F0F0F0",

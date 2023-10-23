@@ -1,34 +1,8 @@
 import * as React from "react";
 import Button from "@mui/material/Button";
-// import {
-// 	Card,
-// 	CardHeader,
-// 	CardContent,
-// 	CardMedia,
-// 	Typography,
-// 	Rating,
-// } from "@mui/material";
-// import { makeStyles } from "@mui/styles";
+
 import { Sell, Star } from "@mui/icons-material";
 
-// const useStyles = makeStyles((theme) => ({
-// 	card: {
-// 		position: "relative",
-// 	},
-// 	cardMedia: {
-// 		position: "relative",
-// 		height: "200px",
-// 	},
-// 	textOverlay: {
-// 		position: "absolute",
-// 		bottom: 0,
-// 		left: 0,
-// 		width: "100%",
-// 		padding: "8px",
-// 		backgroundColor: "rgba(0, 0, 0, 0.6)",
-// 		color: "#fff",
-// 	},
-// }));
 
 const image =
 	"https://firebasestorage.googleapis.com/v0/b/heypay-e9f1f.appspot.com/o/food%2FWhatsApp%20Image%202022-10-18%20at%2017_1280x560_oMDayX67MEauhkko1Cgb8.jpg?alt=media&token=d328fbf8-e548-4b43-b569-2f0b73ea9aba";
@@ -64,7 +38,7 @@ const MainBoxCard = ({
 							{offer && (
 								<div className='flex text-white bg-black py-1 px-2 items-center rounded-full text-[16px] absolute top-3 left-2 '>
 									<Sell fontSize='14px' />
-									<h1>{offer} off order</h1>
+									<h1>{offer} </h1>
 								</div>
 							)}
 

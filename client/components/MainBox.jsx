@@ -3,11 +3,15 @@ import React, { useRef, useState } from "react";
 import MainBoxCard from "./MainBoxCard";
 import { Button } from "@mui/material";
 import { ArrowBack, ArrowForward } from "@mui/icons-material";
+import { useSelector } from "react-redux";
+import RestaurantLoader from "@/Loaders/RestaurantLoader";
 
 const MainBox = ({ data }) => {
 	const [startIndex, setStartIndex] = useState(0);
 	const carouselRef = useRef(null);
 	const [activeIndex, setActiveIndex] = useState(0);
+	const loader = useSelector((state) => state.restaurant.loading);
+    // const loader = true
 	const handleNext = () => {
 		setStartIndex((prevIndex) => Math.min(prevIndex + 3, 3));
 		scrollToNext();
@@ -51,7 +55,7 @@ const MainBox = ({ data }) => {
 							variant='text'
 							sx={{
 								color: "black",
-                                fontWeight:"700",
+								fontWeight: "700",
 								textTransform: "capitalize",
 							}}
 						>
@@ -95,18 +99,22 @@ const MainBox = ({ data }) => {
 				</div>
 				<div className='overflow-x-scroll scroll-hidden ' ref={carouselRef}>
 					<div className='flex gap-x-[12px] md:gap-x-[24px] w-screen '>
-						{data?.restaurants?.map((trend, i) => (
-							<MainBoxCard
-								key={i}
-								image={trend.image}
-								header={trend.name}
-								offer={trend.offer}
-								stars={trend.stars}
-								foodsType={trend.foodsType}
-								ratings={trend.ratings}
-								delivery={trend.deliveries}                                
-							/>
-						))}
+						{loader ? (
+							<RestaurantLoader />
+						) : (
+							data?.restaurants?.map((trend, i) => (
+								<MainBoxCard
+									key={i}
+									image={trend.image}
+									header={trend.name}
+									offer={trend.offer}
+									stars={trend.stars}
+									foodsType={trend.foods}
+									ratings={trend.ratings}
+									delivery={trend.deliveries}
+								/>
+							))
+						)}
 					</div>
 				</div>
 			</div>

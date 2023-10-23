@@ -3,8 +3,6 @@ import * as React from "react";
 import { Sell, Star } from "@mui/icons-material";
 
 
-// const image =
-// 	"https://firebasestorage.googleapis.com/v0/b/heypay-e9f1f.appspot.com/o/food%2FWhatsApp%20Image%202022-10-18%20at%2017_1280x560_oMDayX67MEauhkko1Cgb8.jpg?alt=media&token=d328fbf8-e548-4b43-b569-2f0b73ea9aba";
 
 const AllRestaurantCard = ({
 	delivery,
@@ -42,7 +40,7 @@ const AllRestaurantCard = ({
 							{offer && (
 								<div className='flex text-white bg-black py-1 px-2 items-center rounded-full text-[16px] absolute top-3 left-2 '>
 									<Sell fontSize='14px' />
-									<h1>{offer}  order</h1>
+									<h1>{offer} </h1>
 								</div>
 							)}
 

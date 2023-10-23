@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from "react";
 import "./CustomRadioButton.css";
 import { useDispatch, useSelector } from "react-redux";
-import { toggleSortRestaurant } from "@/redux/features/sortSlice";
+import { sortRestaurantAsync, toggleSortRestaurant } from "@/redux/features/sortSlice";
 
 const CustomRadioButton = ({ setSortShow }) => {
 	const [selectedValue, setSelectedValue] = useState(null);
@@ -26,12 +26,13 @@ const CustomRadioButton = ({ setSortShow }) => {
 		setSelectedValue(null);
 	};
 
-	const handleClick = () => {
+	const handleClick = (value) => {
         // The setSortShow here is for mobile sort nav bar
 		if(setSortShow){
             setSortShow(false)
-        }
+        }        
 		dispatch(toggleSortRestaurant(true));
+        dispatch(sortRestaurantAsync(value))
 	};
 
 	useEffect(() => {
@@ -47,40 +48,40 @@ const CustomRadioButton = ({ setSortShow }) => {
 				<input
 					type='radio'
 					name={loading === false ? " rad " : "radio"}
-					onClick={() => {
-						handleClick();
+					onClick={(e) => {
+						handleClick("Most Popular");
 					}}
-					value='option1'
-					checked={selectedValue === "option1"}
-					onChange={() => handleRadioButtonChange("option1")}
+					value='Most Popular'
+					checked={selectedValue === "Most Popular"}
+					onChange={() => handleRadioButtonChange("Most Popular")}
 				/>
 				<span className='checkmark'></span>
 			</label>
-			<label className='container flex items-center '>
+			{/* <label className='container flex items-center '>
 				<span className="text-[16px] font-[500] md:text-[20px]" >Nearest</span>
 				<input
 					type='radio'
 					name={loading === false ? " rad " : "radio"}
-					onClick={() => {
-						handleClick();
+					onClick={(e) => {
+						handleClick(e.value);
 					}}
 					value='option2'
 					checked={selectedValue === "option2"}
 					onChange={() => handleRadioButtonChange("option2")}
 				/>
 				<span className='checkmark'></span>
-			</label>
+			</label> */}
 			<label className='container flex items-center '>
-				<span className="text-[16px] font-[500] md:text-[20px]" >Highest rated</span>
+				<span className="text-[16px] font-[500] md:text-[20px]" >Highest Stars</span>
 				<input
 					type='radio'
 					name={loading === false ? " rad " : "radio"}
-					onClick={() => {
-						handleClick();
+					onClick={(e) => {
+						handleClick("Highest Stars");
 					}}
-					value='option3'
-					checked={selectedValue === "option3"}
-					onChange={() => handleRadioButtonChange("option3")}
+					value='Highest Stars'
+					checked={selectedValue === "Highest Stars"}
+					onChange={() => handleRadioButtonChange("Highest Stars")}
 				/>
 				<span className='checkmark'></span>
 			</label>
@@ -89,12 +90,12 @@ const CustomRadioButton = ({ setSortShow }) => {
 				<input
 					type='radio'
 					name={loading === false ? " rad " : "radio"}
-					onClick={() => {
-						handleClick();
+					onClick={(e) => {
+						handleClick("Newest");
 					}}
-					value='option4'
-					checked={selectedValue === "option4"}
-					onChange={() => handleRadioButtonChange("option4")}
+					value='Newest'
+					checked={selectedValue === "Newest"}
+					onChange={() => handleRadioButtonChange("Newest")}
 				/>
 				<span className='checkmark'></span>
 			</label>
@@ -104,12 +105,12 @@ const CustomRadioButton = ({ setSortShow }) => {
 				<input
 					type='radio'
 					name={loading === false ? " rad " : "radio"}
-					onClick={() => {
-						handleClick();
+					onClick={(e) => {
+						handleClick("Most Rated");
 					}}
-					value='option5'
-					checked={selectedValue === "option5"}
-					onChange={() => handleRadioButtonChange("option5")}
+					value='Most Rated'
+					checked={selectedValue === "Most Rated"}
+					onChange={() => handleRadioButtonChange("Most Rated")}
 				/>
 				<span className='checkmark'></span>
 			</label>

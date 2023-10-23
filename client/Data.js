@@ -257,30 +257,30 @@ export const offers = {
 				"https://firebasestorage.googleapis.com/v0/b/heypay-e9f1f.appspot.com/o/food%2FScreenshot_20221119-140507_715x313_Ih02reImEJGleIE9RPnKG.jpg?alt=media&token=75fafe96-fea5-4e78-a506-c3abf2b257fe",
 		},
 
-		{
-			name: "Big Mama's Kitchen",
-			foodsType: ["Rice and Stew", "Plantain", "Pepper Soup"],
-			stars: "4.6",
-			ratings: "1,768",
-			offer: "20%",
-			open: "11:30 AM",
-			close: "11:30 PM",
-			deliveries: true,
-			image:
-				"https://firebasestorage.googleapis.com/v0/b/heypay-e9f1f.appspot.com/o/food%2F8553C005-1553-4EEB-9C59-4F886AB2207B_1557x681_mofq_g3JiW_HGilF4HQOY.jpg?alt=media&token=4d04438c-88ac-4661-ab0e-a8db571c1ed5",
-		},	
-        {
-			name: "Nkoyo",
-			foodsType: ["Suya", "Yam Porridge", "Pepper Soup", "Moin Moin"],
-			stars: "4.2",
-			ratings: "1,325",
-			offer: "12%",
-			open: "10:30 AM",
-			close: "10:30 PM",
-			deliveries: false,
-			image:
-				"https://firebasestorage.googleapis.com/v0/b/heyfood-558b4.appspot.com/o/vendor_images%2F8CECADD4-429F-4900-A636-EF1527A9FA7E_798x350_amk-iGBtDkOA_TP2Xytng.jpg?alt=media&token=dbcdfbf7-d63e-4198-aa65-1d8a9af8305c",
-		},
+		// {
+		// 	name: "Big Mama's Kitchen",
+		// 	foodsType: ["Rice and Stew", "Plantain", "Pepper Soup"],
+		// 	stars: "4.6",
+		// 	ratings: "1,768",
+		// 	offer: "20%",
+		// 	open: "11:30 AM",
+		// 	close: "11:30 PM",
+		// 	deliveries: true,
+		// 	image:
+		// 		"https://firebasestorage.googleapis.com/v0/b/heypay-e9f1f.appspot.com/o/food%2F8553C005-1553-4EEB-9C59-4F886AB2207B_1557x681_mofq_g3JiW_HGilF4HQOY.jpg?alt=media&token=4d04438c-88ac-4661-ab0e-a8db571c1ed5",
+		// },	
+        // {
+		// 	name: "Nkoyo",
+		// 	foodsType: ["Suya", "Yam Porridge", "Pepper Soup", "Moin Moin"],
+		// 	stars: "4.2",
+		// 	ratings: "1,325",
+		// 	offer: "12%",
+		// 	open: "10:30 AM",
+		// 	close: "10:30 PM",
+		// 	deliveries: false,
+		// 	image:
+		// 		"https://firebasestorage.googleapis.com/v0/b/heyfood-558b4.appspot.com/o/vendor_images%2F8CECADD4-429F-4900-A636-EF1527A9FA7E_798x350_amk-iGBtDkOA_TP2Xytng.jpg?alt=media&token=dbcdfbf7-d63e-4198-aa65-1d8a9af8305c",
+		// },
 		{
 			name: "Chop and Go",
 			foodsType: ["Fried Rice", "Chapman", "Chicken", "Suya"],

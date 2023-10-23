@@ -3,7 +3,6 @@ import React, { useState, useRef, useEffect } from "react";
 import { Grid, Button, Box } from "@mui/material";
 import Cards from "./Cards";
 import { ArrowForward, ArrowBack } from "@mui/icons-material";
-import { makeStyles } from "@mui/styles";
 import { useSelector } from "react-redux";
 
 const cardData = [

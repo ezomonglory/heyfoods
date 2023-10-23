@@ -15,7 +15,9 @@ import { Divider } from "@mui/material";
 import AllRestaurantBox from "./AllRestaurantBox";
 import SortRestaurantBox from "./SortRestaurantBox";
 
-const SortRestaurantContainer = ({ setClick }) => {
+const SortRestaurantContainer = ({ setClick, data }) => {
+    console.log(data )
+    console.log("heu")
 	return (
 		<div className='flex w-full py-[64px]  md:px-[24px] h-full'>
 			<div className=' w-full  '>
