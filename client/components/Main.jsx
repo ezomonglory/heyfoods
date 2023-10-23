@@ -3,25 +3,12 @@ import React, { useEffect, useState } from "react";
 import MainBox from "./MainBox";
 import { Sort } from "@mui/icons-material";
 import CustomRadioButton from "./CustomRadioButton";
-// import {
-// 	AllRestaurants,
-// 	ChickenRep,
-// 	Drinks,
-// 	LoveitData,
-// 	Market,
-// 	offers,
-// } from "@/Data";
 import { Button, Divider } from "@mui/material";
 import AllRestaurantBox from "./AllRestaurantBox";
 import SortRestaurantContainer from "./SortRestaurantContainer";
 import { useDispatch, useSelector } from "react-redux";
 import { getRestaurantAsync } from "@/redux/features/RestaurantSlice";
 import { pickRandomElementsFromArray } from "@/functions";
-
-//   const myArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]; // Replace with your array
-
-//   const randomElements = pickRandomElementsFromArray(myArray, 5);
-//   console.log(randomElements);
 
 const Main = () => {
 	const load = useSelector((state) => state.sort.sortRestaurant);
@@ -104,11 +91,9 @@ const Main = () => {
 				</div>
 			) : (
 				<div className=' w-full flex flex-col flex-grow gap-y-[42px]  md:w-[70%] md:py-[92px] '>
-					<MainBox data={LoveItData} />
-					{/* <MainBox data={ChickenRep} /> */}
+					<MainBox data={LoveItData} />					
 					<MainBox data={special} />
-					<MainBox data={heyfood} />
-					{/* <MainBox data={AllRestaurants} /> */}
+					<MainBox data={heyfood} />					
 					<Divider />
 					<div className='mt-[24px]'>
 						<AllRestaurantBox data={AllRestaurants} />

@@ -14,10 +14,7 @@ const FoodTabs = () => {
 	const [food, setFood] = useState([]);
 	const sortedRestaurant = useSelector((state) => state.sort.sortRestaurant);
 	const foodLoading = useSelector((state) => state.food.loading);
-	// const foodLoading = true;
-	console.log(foodLoading + "fooodd");
-
-	const dispatch = useDispatch();
+		const dispatch = useDispatch();
 
 	const handleClick = (name) => {
 		dispatch(toggleFoodRestaurant(true));
@@ -25,6 +22,7 @@ const FoodTabs = () => {
 	};
 
 	useEffect(() => {
+        // This functions gets the data for the foodTab from the backend and set it to the food Array
 		dispatch(getFoodTabAsync())
 			.unwrap()
 			.then((res) => {

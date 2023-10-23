@@ -71,24 +71,6 @@ const CardsContainer = () => {
 		}
 	};
 
-	// // Update activeIndex based on scroll position
-	// const updateActiveIndex = () => {
-	// 	const container = document.querySelector(".carousel");
-	// 	if (container) {
-	// 		const scrollPosition = container.scrollLeft;
-	// 		const cardWidth = container.clientWidth / 3;
-	// 		const newIndex = Math.floor(scrollPosition / cardWidth);
-	// 		setActiveIndex(newIndex);
-	// 	}
-	// };
-
-	// // Add a scroll listener to update activeIndex
-	// useEffect(() => {
-	// 	const container = document.querySelector(".carousel");
-	// 	if (container) {
-	// 		container.addEventListener("scroll", updateActiveIndex);
-	// 	}
-	// }, []);
 
 	return (
 		<div
@@ -150,17 +132,7 @@ const CardsContainer = () => {
 					</Button>
 				</div>
 			</div>
-
-			{/* <Box className={classes.indicatorContainer}>
-				{cardData.map((_, index) => (
-					<div
-						key={index}
-						className={`${classes.indicator} ${
-							index === activeIndex ? classes.activeIndicator : ""
-						}`}
-					/>
-				))}
-			</Box> */}
+		
 		</div>
 	);
 };

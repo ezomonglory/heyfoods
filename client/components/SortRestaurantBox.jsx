@@ -12,7 +12,7 @@ import {
 import { resetData, toggleFoodRestaurant } from "@/redux/features/foodSlice";
 import AllRestaurantLoader from "@/Loaders/AllRestaurantsLoader";
 
-const SortRestaurantBox = ({ setClick }) => {
+const SortRestaurantBox = () => {
 	const foodData = useSelector((state) => state.food.data);
 	const foodLoad = useSelector((state) => state.food.foodRestaurant);
 	const foodLoading = useSelector((state) => state.food.loading);
@@ -20,7 +20,7 @@ const SortRestaurantBox = ({ setClick }) => {
 	const sortData = useSelector((state) => state.sort.data);
 	const sortload = useSelector((state) => state.sort.sortRestaurant);
 	const dispatch = useDispatch();
-	// const [data, setData] = useState();
+    // for some reason use state wasnt working perfectly well so i had to do it manually and i didnt have enough time to debug it since i am on a deadline
 	let data = [];
 
 	useEffect(() => {

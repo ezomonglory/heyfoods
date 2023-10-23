@@ -14,8 +14,7 @@ async (payload, {rejectWithValue}) => {
     try {
         const response = await axios.get(
             `${BASE_URL}/api/restaurant/sort/${payload}`			
-        );
-        // console.log(response)
+        );        
         return response.data;
     } catch (error) {
         return rejectWithValue(error.response.data);

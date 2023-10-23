@@ -3,13 +3,15 @@
 import React, { useEffect, useState } from "react";
 import "./CustomRadioButton.css";
 import { useDispatch, useSelector } from "react-redux";
-import { sortRestaurantAsync, toggleSortRestaurant } from "@/redux/features/sortSlice";
+import {
+	sortRestaurantAsync,
+	toggleSortRestaurant,
+} from "@/redux/features/sortSlice";
 
 const CustomRadioButton = ({ setSortShow }) => {
 	const [selectedValue, setSelectedValue] = useState(null);
 	const loading = useSelector((state) => state.sort.sortRestaurant);
 	const dispatch = useDispatch();
-	console.log(loading);
 
 	// Function to handle radio button selection
 	const handleRadioButtonChange = (value) => {
@@ -27,12 +29,12 @@ const CustomRadioButton = ({ setSortShow }) => {
 	};
 
 	const handleClick = (value) => {
-        // The setSortShow here is for mobile sort nav bar
-		if(setSortShow){
-            setSortShow(false)
-        }        
+		// The setSortShow here is for mobile sort nav bar
+		if (setSortShow) {
+			setSortShow(false);
+		}
 		dispatch(toggleSortRestaurant(true));
-        dispatch(sortRestaurantAsync(value))
+		dispatch(sortRestaurantAsync(value));
 	};
 
 	useEffect(() => {
@@ -44,7 +46,9 @@ const CustomRadioButton = ({ setSortShow }) => {
 	return (
 		<div className='flex flex-col'>
 			<label className='container flex items-center '>
-				<span className="text-[16px] font-[500] md:text-[20px]" >Most Popular</span>
+				<span className='text-[16px] font-[500] md:text-[20px]'>
+					Most Popular
+				</span>
 				<input
 					type='radio'
 					name={loading === false ? " rad " : "radio"}
@@ -57,22 +61,10 @@ const CustomRadioButton = ({ setSortShow }) => {
 				/>
 				<span className='checkmark'></span>
 			</label>
-			{/* <label className='container flex items-center '>
-				<span className="text-[16px] font-[500] md:text-[20px]" >Nearest</span>
-				<input
-					type='radio'
-					name={loading === false ? " rad " : "radio"}
-					onClick={(e) => {
-						handleClick(e.value);
-					}}
-					value='option2'
-					checked={selectedValue === "option2"}
-					onChange={() => handleRadioButtonChange("option2")}
-				/>
-				<span className='checkmark'></span>
-			</label> */}
 			<label className='container flex items-center '>
-				<span className="text-[16px] font-[500] md:text-[20px]" >Highest Stars</span>
+				<span className='text-[16px] font-[500] md:text-[20px]'>
+					Highest Stars
+				</span>
 				<input
 					type='radio'
 					name={loading === false ? " rad " : "radio"}
@@ -86,7 +78,7 @@ const CustomRadioButton = ({ setSortShow }) => {
 				<span className='checkmark'></span>
 			</label>
 			<label className='container flex items-center '>
-				<span className="text-[16px] font-[500] md:text-[20px]" >Newest</span>
+				<span className='text-[16px] font-[500] md:text-[20px]'>Newest</span>
 				<input
 					type='radio'
 					name={loading === false ? " rad " : "radio"}
@@ -101,7 +93,9 @@ const CustomRadioButton = ({ setSortShow }) => {
 			</label>
 
 			<label className='container flex items-center '>
-				<span className="text-[16px] font-[500] md:text-[20px]"   >Most Rated</span>
+				<span className='text-[16px] font-[500] md:text-[20px]'>
+					Most Rated
+				</span>
 				<input
 					type='radio'
 					name={loading === false ? " rad " : "radio"}

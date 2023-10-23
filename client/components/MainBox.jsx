@@ -8,10 +8,8 @@ import RestaurantLoader from "@/Loaders/RestaurantLoader";
 
 const MainBox = ({ data }) => {
 	const [startIndex, setStartIndex] = useState(0);
-	const carouselRef = useRef(null);
-	const [activeIndex, setActiveIndex] = useState(0);
-	const loader = useSelector((state) => state.restaurant.loading);
-    // const loader = true
+	const carouselRef = useRef(null);	
+	const loader = useSelector((state) => state.restaurant.loading);    
 	const handleNext = () => {
 		setStartIndex((prevIndex) => Math.min(prevIndex + 3, 3));
 		scrollToNext();
@@ -21,6 +19,8 @@ const MainBox = ({ data }) => {
 		setStartIndex((prevIndex) => Math.max(prevIndex - 3, 0));
 		scrollToPrevious();
 	};
+
+   
 
 	const scrollToNext = () => {
 		if (carouselRef.current) {

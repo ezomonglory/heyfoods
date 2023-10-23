@@ -8,15 +8,16 @@ const initialState = {
     loading:true
 };
 
+// The createAsyncThunk fetches the APIs from the backend
+// This is where i consumed the APIs
+
 export const getFoodTabAsync = createAsyncThunk(
 	"foodTab/getFoodTabAsync",
-	async (payload, { rejectWithValue }) => {
-        // console.log("called getFood")
+	async (payload, { rejectWithValue }) => {        
 		try {
 			const response = await axios.get(
 				`${BASE_URL}/api/foodTab/`			
-			);
-            // console.log(response)
+			);            
 			return response.data;
 		} catch (error) {
 			return rejectWithValue(error.response.data);
@@ -30,8 +31,7 @@ export const getFoodsRestaurantAsync = createAsyncThunk("foodRestaurant/getFoods
     try {
         const response = await axios.get(
             `${BASE_URL}/api/restaurant/searchfood?food=${payload}`			
-        );
-        // console.log(response)
+        );        
         return response.data;
     } catch (error) {
         return rejectWithValue(error.response.data);

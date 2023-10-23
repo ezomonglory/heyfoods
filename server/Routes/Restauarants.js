@@ -41,8 +41,7 @@ router.get("/sort/:name", async (req, res, next) => {
 		if (sort === "Most Rated" || sort === "Most Popular") {
 			Restaurant.find({})
 				.sort({ ratings: -1 })
-				.then((documents) => {
-					// Documents sorted by "ratings" in descending order
+				.then((documents) => {					
 					res.send(documents);
 				})
 				.catch((err) => {
@@ -53,8 +52,7 @@ router.get("/sort/:name", async (req, res, next) => {
 		if (sort === "Highest Stars") {
 			Restaurant.find({})
 				.sort({ stars: -1 })
-				.then((documents) => {
-					// Documents sorted by "ratings" in descending order
+				.then((documents) => {					
 					res.send(documents);
 				})
 				.catch((err) => {
@@ -65,8 +63,7 @@ router.get("/sort/:name", async (req, res, next) => {
 		if (sort === "Newest") {
 			Restaurant.find({})
 				.sort({ launchDate: -1 })
-				.then((documents) => {
-					// Documents sorted by "ratings" in descending order
+				.then((documents) => {					
 					res.send(documents);
 				})
 				.catch((err) => {

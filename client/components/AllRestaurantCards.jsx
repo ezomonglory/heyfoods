@@ -21,12 +21,7 @@ const AllRestaurantCard = ({
 		<div className='w-full md:p-2   '>
 			<div className='bg-white md:p-[12px] rounded-md w-full  flex flex-col gap-y-[1px] justify-between'>
 				<div
-					className='w-full bg-gray-400 rounded-lg relative overflow-hidden '
-					// style={{
-					// 	backgroundImage: `url(${image})`,
-					// 	backgroundPosition: "cover",
-					// 	backgroundSize: "cover",
-					// }}
+					className='w-full bg-gray-400 rounded-lg relative overflow-hidden '					
 				>
 
                     <img src={image} className="w-full h-full min-w-[250px] min-h-[100px] " />

@@ -7,14 +7,7 @@ import { Button } from "@mui/material";
 const Cards = ({ image }) => {
 	return (
 		<div
-			className='w-[80vw] sm:w-[300px] h-[100%]  md:w-[400px] md:h-[170px] '
-			// style={{
-			// 	backgroundImage:
-			// 		`url('${image})`,				
-			// 	backgroundSize: "cover",                
-            //     backgroundRepeat:"no-repeat",
-			// 	backgroundPosition: "center center",
-			// }}
+			className='w-[80vw] sm:w-[300px] h-[100%]  md:w-[400px] md:h-[170px] '			
             
 		>
             <img src={image} alt="image" width="100%" height="100%" className="rounded-xl" />

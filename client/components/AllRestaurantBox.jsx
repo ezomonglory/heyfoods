@@ -1,8 +1,6 @@
 "use client";
-import React, { useRef, useState } from "react";
-import MainBoxCard from "./MainBoxCard";
-import { Button } from "@mui/material";
-import { ArrowBack, ArrowForward } from "@mui/icons-material";
+import React, { useRef} from "react";
+
 import AllRestaurantCard from "./AllRestaurantCards";
 
 const AllRestaurantBox = ({ data }) => {
