@@ -7,11 +7,11 @@ import AllRestaurantCard from "./AllRestaurantCards";
 import { useSelector } from "react-redux";
 import AllRestaurantLoader from "@/Loaders/AllRestaurantsLoader";
 
-const Search = ({ setSearch }) => {
+const Search = ({ setSearch, search }) => {
 	const data = useSelector((state) => state.restaurant.data);
 	const loading = useSelector((state) => state.restaurant.loading);
 	return (
-		<div className='h-screen fixed bg-white w-full p-4 '>
+		<div className={`h-screen fixed bg-white w-full p-4 moveInDown ${search ? "animate-moveInDown" : "moveInDown"} `}>
 			<div
 				className='absolute top-4 right-4'
 				onClick={() => {

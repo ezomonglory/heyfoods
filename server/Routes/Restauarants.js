@@ -3,6 +3,8 @@ const router = express.Router();
 const createError = require("http-errors");
 const Restaurant = require("../models/RestaurantModel");
 
+// Creating a restaurant
+
 router.post("/create", async (req, res, next) => {
 	try {
 		const request = req.body;
@@ -34,6 +36,7 @@ router.post("/create", async (req, res, next) => {
 	}
 });
 
+// Sorting a restaurant
 router.get("/sort/:name", async (req, res, next) => {
 	try {
 		const sort = req.params.name;
@@ -41,7 +44,7 @@ router.get("/sort/:name", async (req, res, next) => {
 		if (sort === "Most Rated" || sort === "Most Popular") {
 			Restaurant.find({})
 				.sort({ ratings: -1 })
-				.then((documents) => {					
+				.then((documents) => {
 					res.send(documents);
 				})
 				.catch((err) => {
@@ -52,7 +55,7 @@ router.get("/sort/:name", async (req, res, next) => {
 		if (sort === "Highest Stars") {
 			Restaurant.find({})
 				.sort({ stars: -1 })
-				.then((documents) => {					
+				.then((documents) => {
 					res.send(documents);
 				})
 				.catch((err) => {
@@ -63,7 +66,7 @@ router.get("/sort/:name", async (req, res, next) => {
 		if (sort === "Newest") {
 			Restaurant.find({})
 				.sort({ launchDate: -1 })
-				.then((documents) => {					
+				.then((documents) => {
 					res.send(documents);
 				})
 				.catch((err) => {
@@ -75,6 +78,7 @@ router.get("/sort/:name", async (req, res, next) => {
 	}
 });
 
+// Searching for a restaurant based on the name
 router.get("/search", async (req, res, next) => {
 	try {
 		const { name } = req.query;
@@ -90,6 +94,8 @@ router.get("/search", async (req, res, next) => {
 	}
 });
 
+
+// Searching for food and it returns the restaurant(s) the sells the food
 router.get("/searchfood", async (req, res, next) => {
 	try {
 		const { food } = req.query;
@@ -102,6 +108,7 @@ router.get("/searchfood", async (req, res, next) => {
 	}
 });
 
+// To get all restaurants
 router.get("/", async (req, res, next) => {
 	try {
 		const restaurants = await Restaurant.find();

@@ -16,16 +16,16 @@ const AllRestaurantBox = ({ data }) => {
 				</div>
 
 				<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[42px] md:gap-[8px] w-full h-fit '>
-					{data?.restaurants?.map((trend, i) => (
+					{data?.restaurants?.map((data, i) => (
 						<AllRestaurantCard
 							key={i}
-							image={trend.image}
-							header={trend.name}
-							offer={trend.offer}
-							stars={trend.stars}
-							foodsType={trend.foods}
-							ratings={trend.ratings}
-							delivery={trend.deliveries}
+							image={data.image}
+							header={data.name}
+							offer={data.offer}
+							stars={data.stars}
+							foodsType={data.foods}
+							ratings={data.ratings}
+							delivery={data.deliveries}
 						/>
 					))}
 				</div>

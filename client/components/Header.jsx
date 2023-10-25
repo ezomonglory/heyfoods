@@ -21,9 +21,9 @@ const Header = () => {
 		>
 			<HeaderTop sideBarShow={sideBarShow} setSearch={setSearch} setSideBarShow={setSideBarShow} />
 			<HeaderBottom setSortShow={setSortShow} setSearch={setSearch} sortShow={sortShow} />
-			{sortShow && <SortNav setSortShow={setSortShow} />}
-			{sideBarShow && <SideBar setSideBarShow={setSideBarShow} />}
-            {search && <Search setSearch={setSearch} />}
+			{sortShow && <SortNav setSortShow={setSortShow} sortShow={sortShow} />}
+			 <SideBar setSideBarShow={setSideBarShow} sideBarShow={sideBarShow} />
+            {search && <Search setSearch={setSearch} search={search} />}
 		</div>
 	);
 };

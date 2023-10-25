@@ -1,5 +1,5 @@
 
-// My function to pick randome data fron the array 
+// My function to pick random data fron the array 
 
 export const pickRandomElementsFromArray = (arr, count) => {
 	if (count > arr.length) {		

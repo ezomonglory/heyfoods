@@ -15,65 +15,69 @@ body {
 	display: none;
 }
 
-/* .container {
-    display: block;
-    position: relative;
-    padding-left: 35px;
-    margin-bottom: 12px;
-    cursor: pointer;
-    font-size: 22px;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-  }
-  
-  
-  .container input {
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
-  }
-  
-  
-  .checkmark {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 25px;
-    width: 25px;
-    background-color: #eee;
-    border-radius: 50%;
-  }
-  
-  
-  .container:hover input ~ .checkmark {
-    background-color: #ccc;
-  }
-  
-  
-  .container input:checked ~ .checkmark {
-    background-color: #000;
-  }
-  
-  
-  .checkmark:after {
-    content: "";
-    position: absolute;
-    display: none;
-  }
-  
-  
-  .container input:checked ~ .checkmark:after {
-    display: block;
-  }
-  
-  
-  .container .checkmark:after {
-       top: 9px;
-      left: 9px;
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: white;
-  } */
+/* Animations */
+
+.moveOutLeft{
+    transform: translateX(-100%);   
+}
+
+.animate-moveInLeft{
+    animation: moveInLeft .3s ease-in;
+    transition: all .3s;
+}
+
+@keyframes moveInLeft {
+    0%{
+        transform: translateX(-100%);
+    }
+
+    100%{
+        transform: translateX(0%);
+    }
+}
+
+.moveInDown{
+    transform: translateY(-100%);
+}
+
+.animate-moveInDown{
+    transform: translateY(0%);
+    transition: all .7s;
+animation: moveInDown  .7s ease-in;
+}
+
+@keyframes moveInDown {
+    0%{
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+   
+
+    100%{
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+.sortDown{
+    transform: translateY(-100%);
+}
+
+.animate-sortDown{
+    transform: translateY(0%);
+    transition: all .5s;
+animation: sortDown  .5s ease-in;
+}
+
+@keyframes sortDown {
+    0%{
+        transform: translateY(-20%);
+        opacity: 0;
+    }
+   
+
+    100%{
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}

@@ -3,10 +3,10 @@ import { Button, IconButton } from "@mui/material";
 import Image from "next/image";
 import React from "react";
 
-const SideBar = ({ setSideBarShow }) => {
+const SideBar = ({ setSideBarShow, sideBarShow }) => {
 	return (
-		<div className='bg-[#0000006c] h-screen  fixed top-0 w-screen z-40'>
-			<div className='fixed h-screen flex flex-col justify-between py-[128px]  bg-white md:w-[350px]  w-[90%] z-40 top-0 '>
+		<div className={`bg-[#0000006c] h-screen  fixed top-0 w-screen z-40  ${sideBarShow ? "block" : "hidden"} `}>
+			<div className={`fixed h-screen flex flex-col  justify-between py-[128px]  bg-white md:w-[350px]  w-[90%] z-40 top-0 ${sideBarShow ? "animate-moveInLeft" : "moveOutLeft"}`}>
 				<div
 					className='absolute top-8 right-2'
 					onClick={() => {

@@ -3,8 +3,6 @@ const createError = require('http-errors')
 require("dotenv").config()
 const morgan = require("morgan")
 const RestaurantRoute = require("./Routes/Restauarants")
-// const Course = require("./Route/Course")
-// const Session = require("./Route/Session")
 require("./helpers/init_mongodb")
 const cors = require('cors');
 const FoodTabRoute = require("./Routes/FoodTab")
